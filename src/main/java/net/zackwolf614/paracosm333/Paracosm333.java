@@ -39,8 +39,9 @@ public class Paracosm333 implements ModInitializer {
   @Override
   public void onInitialize() {
     WORLD_KEY = RegistryKey.of(Registry.WORLD_KEY, new Identifier(ModID, "paracosm"));
+    RegistryKey.of(Registry.CHUNK_GENERATOR_KEY, new Identifier(ModID, "paracosm_noise"));
     Registry.register(Registry.ITEM, new Identifier("paracosm333", "crystal_heart"), CRYSTAL_HEART);
-    CustomPortalApiRegistry.addPortal(Blocks.GOLD_BLOCK,
+    CustomPortalApiRegistry.addPortal(Blocks.LAPIS_BLOCK,
                                       PortalIgnitionSource.ItemUseSource(CRYSTAL_HEART),
                                       new Identifier("paracosm333", "paracosm"),
                                       0, 0, 76);
